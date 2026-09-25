@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Saloon Hold'em</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="scan"></div>
+<header>
+  <h1>SALOON <span>HOLD'EM</span></h1>
+  <div class="hdr-btns">
+    <button class="icon-btn" id="soundBtn" title="Toggle music">🔊</button>
+    <button class="icon-btn" id="helpBtn" title="Hand rankings">?</button>
+  </div>
+</header>
+<main>
+  <div class="table">
+    <div class="bots-row" id="botsRow"></div>
+    <div>
+      <div class="board" id="board"></div>
+      <div class="pot" id="potLine">Pot: 0</div>
+    </div>
+    <div class="human-row">
+      <div class="human-seat" id="humanSeat">
+        <div class="nm" style="color:var(--gold)">YOU</div>
+        <div class="chips" id="humanChips">1000</div>
+        <div class="cards" id="humanCards"></div>
+        <div class="strength" id="strengthLine"></div>
+      </div>
+    </div>
+  </div>
+  <div class="log" id="log"></div>
+  <div class="controls" id="controls"></div>
+  <div class="center-msg" id="centerMsg" style="display:none"></div>
+</main>
+
+<div class="overlay" id="helpOverlay">
+  <div class="modal">
+    <button class="close-x" id="closeHelp">×</button>
+    <h2>HAND RANKINGS</h2>
+    <div id="rankList"></div>
+    <p style="font-size:15px">Best 5-card hand wins. Ties split the pot. Higher rank beats lower every time — a pair of 2s beats any high-card hand.</p>
+  </div>
+</div>
+
+<div class="overlay" id="startOverlay">
+  <div class="modal" style="text-align:center">
+    <h2 style="text-align:center">WELCOME, PARDNER</h2>
+    <p style="font-size:17px">Texas Hold'em, 1 vs 3 bots. Blinds 10/20, everyone starts with 1000 chips. Tap <b style="color:var(--gold)">?</b> anytime for hand rankings. Bust? You'll get a house rebuy so you can keep practicing.</p>
+    <button class="big" id="startBtn">DEAL ME IN</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
